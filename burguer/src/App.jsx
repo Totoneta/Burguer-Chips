@@ -1,7 +1,7 @@
 import Navbar from './componentes/Navbar/navbar.jsx';
 import Index from './componentes/index-fir-sec/index-fir-sec.jsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Contacto from './componentes/contacto-page/contacto.jsx';
+import Ingresar from './componentes/ingresar-page/ingresar.jsx';
 import Bebidas from './componentes/bebidas/bebidas.jsx';
 import Burguers from './componentes/burguers/burguers.jsx';
 import Combos from './componentes/combos/combos.jsx';
@@ -46,7 +46,7 @@ export default function App() {
                 <Route path="/Productos/#Combos-t" element={<Combos />} />
                 <Route path="/Productos/#Burguers-t" element={<Burguers />} />
                 <Route path="/Productos/#Bebidas-t" element={<Bebidas />} />
-                <Route path="/Contacto" element={<Contacto />} />
+                <Route path="/Ingresar" element={<Ingresar />} />
             </Routes>
             <Footer />
 

@@ -17,17 +17,22 @@ function Navbar({ carrito, setCarrito, cantidad, setCantidad }) {
         setCantidad(cantidad - 1);
     }
 
+    const VaciarCarrito = () => {
+        setCarrito([])
+        setCantidad(0)
+    }
+
     return (
         <nav className="container-navbar">
             <ul className="nav-list">
 
-                <Link to="index.html"><img src="LOGO-B.png" alt='Logo' /></Link>
+                <Link to="/"><img src="LOGO-B.png" alt='Logo' /></Link>
 
-                <li className="nav-item"><Link to="/">INICIO</Link></li>
+                <li className="nav-item"><Link to="/">Inicio</Link></li>
 
-                <li className="nav-item"><Link to="/Productos">PRODUCTOS</Link></li>
+                <li className="nav-item"><Link to="/Productos">Productos</Link></li>
 
-                <li className="nav-item"><Link to="/Contacto">CONTACTO</Link></li>
+                <li className="nav-item"><Link to="/Ingresar">Ingresar</Link></li>
 
                 <li className="nav-item-carrito">
                     <div className="cart-navbar-menu" onClick={ShowHideMenu}>
@@ -45,17 +50,22 @@ function Navbar({ carrito, setCarrito, cantidad, setCantidad }) {
                                     </div>
                                     <div className="item-cart-btns">
                                         <button onClick={() => Eliminar(index)}>Eliminar</button>
+                                        <button>Editar</button>
                                     </div>
                                 </li>
                             ))}
                             <div className="btns-cart-vaciar-pagar">
-                                <button className="vaciar-cart">Vaciar Carrito</button>
-                                <button className="pagar-cart">Pagar</button>
+                                <button className="vaciar-cart" onClick={VaciarCarrito} >Vaciar Carrito</button>
+                                <button className="pagar-cart" >Pagar</button>
                             </div>
                         </ul>
                     ) : (
                         <ul className="cart">
                             <li className="cart-vacio"><h1>EMPTY CART</h1></li>
+                            <div className="btns-cart-vaciar-pagar">
+                                <button className="vaciar-cart">Vaciar Carrito</button>
+                                <button className="pagar-cart">Pagar</button>
+                            </div>
                         </ul>
                     )
                     )}

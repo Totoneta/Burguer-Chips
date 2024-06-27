@@ -124,11 +124,25 @@
 
 /* Item cart buttons */
 .item-cart-btns{
-    height: 4rem;
+    height: 6rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    margin-right: 1rem;
+    margin: 1rem;
+}
+
+.item-cart-btns>button{
+    padding: .4rem;
+    cursor: pointer;
+    background-color: #f44b4b;
+    border: 1px solid #000;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.item-cart-btns>button:hover{
+    background-color: red;
 }
 
 /* Carrito vacío */
@@ -154,7 +168,7 @@
     padding: .3rem;
     margin: .5rem;
     cursor: pointer;
-    background-color: rgb(244, 75, 75);
+    background-color: #f44b4b;
     border: 1px solid #000;
     color: #fff;
     border-radius: 3px;

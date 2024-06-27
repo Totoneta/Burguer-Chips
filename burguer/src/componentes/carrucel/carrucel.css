@@ -17,14 +17,16 @@
     height: auto;
     overflow-x: auto;  
     border-radius: 5px;  
-    z-index: 0;
     scroll-behavior: smooth;
+    z-index: -1;
+
 }
 
 .carrucel{
     width: auto;
     display: flex;
     flex-wrap: nowrap;
+    position: static;
 }
 
 .carrucel-container::-webkit-scrollbar{
@@ -43,7 +45,7 @@
     width: 73rem;
     display: flex;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 0;
 }
 
 .botones>img{
@@ -51,5 +53,6 @@
     border-radius: 999px;
     height: 3rem;
     width: 3rem;
+    position: static;
     cursor: pointer;
 }

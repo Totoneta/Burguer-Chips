@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 
-function Navbar({ carrito, setCarrito, cantidad, setCantidad }) {
+function Navbar({ carrito, setCarrito, cantidad, setCantidad, total, setTotal }) {
 
     const [openmenu, setOpenMenu] = useState(false);
 
@@ -20,6 +20,7 @@ function Navbar({ carrito, setCarrito, cantidad, setCantidad }) {
     const VaciarCarrito = () => {
         setCarrito([])
         setCantidad(0)
+        setTotal(0)
     }
 
     return (
@@ -56,6 +57,7 @@ function Navbar({ carrito, setCarrito, cantidad, setCantidad }) {
                             ))}
                             <div className="btns-cart-vaciar-pagar">
                                 <button className="vaciar-cart" onClick={VaciarCarrito} >Vaciar Carrito</button>
+                                <span>Total: ${total} </span>
                                 <button className="pagar-cart" >Pagar</button>
                             </div>
                         </ul>
@@ -64,6 +66,7 @@ function Navbar({ carrito, setCarrito, cantidad, setCantidad }) {
                             <li className="cart-vacio"><h1>EMPTY CART</h1></li>
                             <div className="btns-cart-vaciar-pagar">
                                 <button className="vaciar-cart">Vaciar Carrito</button>
+                                <span>Total: ${total} </span>
                                 <button className="pagar-cart">Pagar</button>
                             </div>
                         </ul>

@@ -98,7 +98,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #fff;
     border-radius: 5px;
     overflow: hidden;
     border: 1px solid #000;
@@ -114,6 +113,8 @@
     justify-content: space-between;
     align-items: center;
     border: 1px solid #000;
+    z-index: 10;
+
 }
 
 .item-cart>img{
@@ -121,6 +122,13 @@
     height: 5.5rem;
     margin-left: .2rem;
 }
+
+/* Item cart Text */
+.item-cart-text{
+    font-size: .8rem;
+    margin-left: .5rem;
+}
+
 
 /* Item cart buttons */
 .item-cart-btns{

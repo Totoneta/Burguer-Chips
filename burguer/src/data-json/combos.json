@@ -1,0 +1,37 @@
+[
+    {
+        "id": "14",
+        "titulo": "2 Burguer Americana, 2 Papas y 2 Bebidas",
+        "descripcion": "Carne jugosa, queso derretido, lechuga crujiente, tomate fresco, cebolla, pepinillos, ketchup, mostaza, en pan tostado.",
+        "precio": "$22.000",
+        "img": "/combos5.jpg"
+    },
+    {
+        "id": "15",
+        "titulo": "2 Burguer Vikinga, 2 Papas y 2 Bebidas",
+        "descripcion": "Champiñones salteados, queso, cebolla caramelizada, lechuga fresca, tomate, pepinillos, salsa especial, en pan tostado.",
+        "precio": "$20.500",
+        "img": "/combos4.jpg"
+    },
+    {
+        "id": "16",
+        "titulo": "2 Burguer Crispi, 2 Papas y 2 Bebidas",
+        "descripcion": "Lechuga crujiente, tomate fresco, queso derretido, cebolla, pepinillos, salsa especial, en pan crocante.",
+        "precio": "$12.500",
+        "img": "/combos3.jpg"
+    },
+    {
+        "id": "17",
+        "titulo": "2 Burguer Fire, 2 Papas y 2 Bebidas",
+        "descripcion": "Jalapeños picantes, queso cheddar, lechuga fresca, tomate, cebolla, salsa de chipotle, en pan tostado.",
+        "precio": "$28.000",
+        "img": "/combos.jpg"
+    },
+    {
+        "id": "18",
+        "titulo": "2 Burguer Latina, 2 Papas y 2 Bebidas",
+        "descripcion": "Guacamole, queso Monterrey Jack, lechuga fresca, tomate, cebolla morada, jalapeños, salsa de chipotle, en pan tostado.",
+        "precio": "$22.300",
+        "img": "/combos2.jpg"
+    }
+]

@@ -1,0 +1,167 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Pagina */
+.cont-prod-mayor>h2{
+    text-align: center;
+    color: #000;
+    margin: .5rem;
+    padding: .5rem;
+    font-size: 3rem;
+    background: linear-gradient(transparent, #fff);
+    width: 100%;
+}
+
+.productos-cont {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Titulos de seccion */
+.combos-t {
+    color: #000;
+    margin: .5rem;
+    padding: .5rem;
+    font-size: 2rem;
+    text-align: center;
+    width: auto;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+}
+
+.burguers-t {
+    color: #000;
+    margin: .5rem;
+    padding: .5rem;
+    font-size: 2rem;
+    text-align: center;
+    width: auto;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+}
+
+.bebidas-t {
+    color: #000;
+    margin: .5rem;
+    padding: .5rem;
+    font-size: 2rem;
+    text-align: center;
+    width: auto;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+}
+
+
+/* Contenedores de tarjetas */
+
+.burguers {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.bebidas {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.combos {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tarjetas */
+
+.tarjeta {
+    height: 15rem;
+    width: 90%;
+    background: linear-gradient(to right, #fff785 60%, #ffffff);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+    margin: 1rem auto;
+    transition-duration: .5s;
+    transition-property: background-color, color;
+    box-shadow: 0px 0px 10px #000;
+}
+
+.texto-tarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.tarjeta-cont {
+    display: flex;
+    height: 12rem;
+    width: 16rem;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+}
+
+.tarjeta>img {
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.button-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-cont>button>img {
+    height: 2rem;
+}
+
+.button-cont>button {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+.button-cont>button>a>img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.button-cont>button:hover {
+    background-color: #cecece;
+}
+
+
+.bebidas>.tarjeta>img {
+    height: 14rem;
+    width: 14rem;
+}

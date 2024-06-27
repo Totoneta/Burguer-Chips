@@ -1,0 +1,37 @@
+[
+    {
+        "id": "9",
+        "titulo": "Burguer Americana",
+        "descripcion": "Carne jugosa, queso derretido, lechuga crujiente, tomate fresco, cebolla, pepinillos, ketchup, mostaza, en pan tostado.",
+        "precio": "$10.000",
+        "img": "/burguer.jpg"
+    },
+    {
+        "id": "10",
+        "titulo": "Burguer Vikinga",
+        "descripcion": "Champiñones salteados, queso, cebolla caramelizada, lechuga fresca, tomate, pepinillos, salsa especial, en pan tostado.",
+        "precio": "$9.700",
+        "img": "/burguer2.jpg"
+    },
+    {
+        "id": "11",
+        "titulo": "Burguer Crispi",
+        "descripcion": "Lechuga crujiente, tomate fresco, queso derretido, cebolla, pepinillos, salsa especial, en pan crocante.",
+        "precio": "$5.400",
+        "img": "/burguer3.jpg"
+    },
+    {
+        "id": "12",
+        "titulo": "Burguer Fire",
+        "descripcion": "Jalapeños picantes, queso cheddar, lechuga fresca, tomate, cebolla, salsa de chipotle, en pan tostado.",
+        "precio": "$12.500",
+        "img": "/burguer4.jpg"
+    },
+    {
+        "id": "13",
+        "titulo": "Burguer Latina",
+        "descripcion": "Guacamole, queso Monterrey Jack, lechuga fresca, tomate, cebolla morada, jalapeños, salsa de chipotle, en pan tostado.",
+        "precio": "$10.000",
+        "img": "/burguer5.jpg"
+    }
+]

@@ -1,0 +1,55 @@
+/* navbar --> nabvar.js */
+.container-navbar {
+    margin-bottom: 0;
+}
+
+.index-first{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+.carrucel-container{
+    position: static;
+    width: 70rem;
+    height: auto;
+    overflow-x: auto;  
+    border-radius: 5px;  
+    z-index: 0;
+    scroll-behavior: smooth;
+}
+
+.carrucel{
+    width: auto;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.carrucel-container::-webkit-scrollbar{
+    display: none;
+}
+
+.carrucel>img{
+    flex: 0 0 auto;
+    width: 70rem;
+    height: 30rem; 
+}
+
+.botones{
+    position: absolute;
+    top: 19rem;
+    width: 73rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.botones>img{
+    background-color: red;
+    border-radius: 999px;
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+}

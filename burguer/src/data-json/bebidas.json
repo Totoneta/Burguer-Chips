@@ -1,0 +1,50 @@
+[
+    {
+        "id": "1",
+        "titulo": "Coca-Cola",
+        "precio": "$1.800",
+        "img": "/coca.png"
+    },
+    {
+        "id": "2",
+        "titulo": "Sprite",
+        "precio": "$1.800",
+        "img": "/sprite.png"
+    },
+    {
+        "id": "3",
+        "titulo": "Fanta",
+        "precio": "$1.800",
+        "img": "/fanta.png"
+    },
+    {
+        "id": "4",
+        "titulo": "Agua sín Gas",
+        "precio": "$12.500",
+        "img": "/agua-s-gas.png"
+    },
+    {
+        "id": "5",
+        "titulo": "Agua con Gas",
+        "precio": "$10.000",
+        "img": "/agua-c-gas.png"
+    },
+    {
+        "id": "6",
+        "titulo": "Coca-Cola 1.5lts",
+        "precio": "$2.600",
+        "img": "/coca-1.5.png"
+    },
+    {
+        "id": "7",
+        "titulo": "Sprite 1.5lts",
+        "precio": "$2.600",
+        "img": "/sprite-1.5.png"
+    },
+    {
+        "id": "8",
+        "titulo": "Fanta 1.5lts",
+        "precio": "$2.600",
+        "img": "/fanta-1.5.png"
+    }
+]

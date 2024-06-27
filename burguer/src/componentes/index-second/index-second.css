@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.index-second {
+    padding-top: 4rem;
+    color: #fff;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.index-second>img {
+    width: 35rem;
+}
+
+.bienvenida {
+    text-align: left;
+    width: 35rem;
+    position: static;
+    z-index: 1;
+}
+
+.bienvenida>h1 {
+    font-size: 3rem;
+}
+
+.bienvenida>p {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.fondo {
+    background-color: red;
+    width: 62rem;
+    height: 35rem;
+    border-radius: 999px;
+    position: absolute;
+    left: -17rem;
+    z-index: 0;
+}

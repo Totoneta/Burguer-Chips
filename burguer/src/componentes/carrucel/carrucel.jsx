@@ -8,14 +8,14 @@ function Carrucel() {
 
     function Scrollizq() {
         if (carrucelRef.current) {
-            carrucelRef.current.scrollLeft -= 1120;
+            carrucelRef.current.scrollLeft -= 1280;
             setIndex(prevIndex => Math.max(prevIndex - 1, 1));
         }
     }
 
     function Scrollder() {
         if (carrucelRef.current) {
-            carrucelRef.current.scrollLeft += 1120;
+            carrucelRef.current.scrollLeft += 1280;
             setIndex(prevIndex => prevIndex + 1);
         }
     }
@@ -31,9 +31,8 @@ function Carrucel() {
             <div className="carrucel-container"  ref={carrucelRef}>
                 <div className="carrucel">
                     <img src="/carrucel1.jpg" alt="Hamburguesa" />
-                    <img src="/carrucel2.jpg" alt="Hamburguesa" />
-                    <img src="/carrucel3.jpg" alt="Hamburguesa" />
                     <img src="/carrucel4.jpg" alt="Hamburguesa" />
+                    <img src="/carrucel2.jpg" alt="Hamburguesa" />
                 </div>
             </div>
         </section>

@@ -1,11 +1,8 @@
 import Navbar from './componentes/Navbar/navbar.jsx';
-import Index from './componentes/index-fir-sec/index-fir-sec.jsx';
+import Index from './pages/index-carr-indsec/index-carr-indsec.jsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Ingresar from './componentes/ingresar-page/ingresar.jsx';
-import Bebidas from './componentes/bebidas/bebidas.jsx';
-import Burguers from './componentes/burguers/burguers.jsx';
-import Combos from './componentes/combos/combos.jsx';
-import Productos from './componentes/productos-page/productos.jsx';
+import Ingresar from './pages/ingresar-page/ingresar.jsx';
+import Productos from './pages/productos-page/productos.jsx';
 import Footer from './componentes/footer/footer.jsx';
 import { useEffect, useState } from 'react';
 
@@ -24,8 +21,8 @@ export default function App() {
 
     const [total, setTotal] = useState(0);
 
-    let canttotal = 0;
     useEffect(() =>{
+        let canttotal = 0;
         carrito.forEach((e) => {
             canttotal += Number(e.precio);
             setTotal(canttotal)
@@ -51,9 +48,6 @@ export default function App() {
 
                 <Route path="/" element={<Index />} />
                 <Route path="/Productos" element={<Productos carrito={carrito} setCarrito={setCarrito} cantidad={cantidad} setCantidad={setCantidad} total={total} setTotal={setTotal} />} />
-                <Route path="/Productos/#Combos-t" element={<Combos />} />
-                <Route path="/Productos/#Burguers-t" element={<Burguers />} />
-                <Route path="/Productos/#Bebidas-t" element={<Bebidas />} />
                 <Route path="/Ingresar" element={<Ingresar />} />
             </Routes>
             <Footer />

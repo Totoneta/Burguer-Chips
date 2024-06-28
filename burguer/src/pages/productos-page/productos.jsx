@@ -1,6 +1,6 @@
-import Bebidas from '../bebidas/bebidas';
-import Burguers from '../burguers/burguers';
-import Combos from '../combos/combos';
+import Bebidas from '../../componentes/bebidas/bebidas';
+import Burguers from '../../componentes/burguers/burguers';
+import Combos from '../../componentes/combos/combos';
 import './productos.css';
 
 

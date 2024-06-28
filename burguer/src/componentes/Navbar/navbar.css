@@ -171,6 +171,11 @@
     align-items: center;
 }
 
+.btns-cart-vaciar-pagar>span{
+    color: #0a6f0a;
+    font-weight: bold;
+}
+
 .vaciar-cart,
 .pagar-cart{
     padding: .3rem;

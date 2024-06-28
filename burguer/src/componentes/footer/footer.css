@@ -26,6 +26,17 @@
     justify-content: center;
     cursor: pointer;
 }
+
+.red:first-child:hover{
+    color: #0400ff;
+}
+.red:last-child:hover{
+    color: #327c03;
+}
+.red:hover{
+    color: #ac009b;
+}
+
 .red>span{
     font-size: 18px;
 }

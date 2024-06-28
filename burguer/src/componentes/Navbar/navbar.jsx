@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
+import { ItemsCart } from "../Items-carrito/items-carrito";
 
 function Navbar({ carrito, setCarrito, cantidad, setCantidad, total, setTotal }) {
 
@@ -10,18 +11,7 @@ function Navbar({ carrito, setCarrito, cantidad, setCantidad, total, setTotal })
         setOpenMenu(!openmenu)
     }
 
-    const Eliminar = (index) => {
-        const updatedCarrito = [...carrito];
-        updatedCarrito.splice(index, 1);
-        setCarrito(updatedCarrito);
-        setCantidad(cantidad - 1);
-    }
 
-    const VaciarCarrito = () => {
-        setCarrito([])
-        setCantidad(0)
-        setTotal(0)
-    }
 
     return (
         <nav className="container-navbar">
@@ -36,42 +26,14 @@ function Navbar({ carrito, setCarrito, cantidad, setCantidad, total, setTotal })
                 <li className="nav-item"><Link to="/Ingresar">Ingresar</Link></li>
 
                 <li className="nav-item-carrito">
+
                     <div className="cart-navbar-menu" onClick={ShowHideMenu}>
                         <img className="carrito-img-navbar" src="/carrito.svg" alt="Carrito" />
                         <span> {cantidad} </span>
                     </div>
-                    {openmenu && (Array.isArray(carrito) && carrito.length > 0 ? (
-                        <ul className="cart">
-                            {carrito.map((item, index) => (
-                                <li key={index} className="item-cart">
-                                    <img src={item.img} alt={item.titulo} />
-                                    <div className="item-cart-text">
-                                        <h3>{item.titulo}</h3>
-                                        <span>${item.precio}</span>
-                                    </div>
-                                    <div className="item-cart-btns">
-                                        <button onClick={() => Eliminar(index)}>Eliminar</button>
-                                        <button>Editar</button>
-                                    </div>
-                                </li>
-                            ))}
-                            <div className="btns-cart-vaciar-pagar">
-                                <button className="vaciar-cart" onClick={VaciarCarrito} >Vaciar Carrito</button>
-                                <span>Total: ${total} </span>
-                                <button className="pagar-cart" >Pagar</button>
-                            </div>
-                        </ul>
-                    ) : (
-                        <ul className="cart">
-                            <li className="cart-vacio"><h1>EMPTY CART</h1></li>
-                            <div className="btns-cart-vaciar-pagar">
-                                <button className="vaciar-cart">Vaciar Carrito</button>
-                                <span>Total: ${total} </span>
-                                <button className="pagar-cart">Pagar</button>
-                            </div>
-                        </ul>
-                    )
-                    )}
+
+                    <ItemsCart openmenu={openmenu} carrito={carrito} setCarrito={setCarrito} cantidad={cantidad} setCantidad={setCantidad} total={total} setTotal={setTotal} />
+
                 </li>
             </ul>
         </nav>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import IniciarS from "../iniciar-s/iniciar-s";
-import Registrarse from "../registrarse/registrarse";
+import IniciarS from "../../componentes/iniciar-s/iniciar-s";
+import Registrarse from "../../componentes/registrarse/registrarse";
 import "./ingresar.css";
 
 function Contacto() {

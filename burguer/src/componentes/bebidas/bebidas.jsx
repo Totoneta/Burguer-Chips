@@ -1,11 +1,11 @@
 import bebidas from "../../data-json/bebidas.json";
 
-
-function Bebidas({ setCarrito, carrito }) {
+function Bebidas({ setCarrito, carrito, setCantidad, cantidad, setTotal, total }) {
 
   const agregarAlCarrito = (carrito, elemento) => {
     setCarrito([...carrito, elemento])
-    console.log(carrito)
+    setCantidad(cantidad + 1)
+    setTotal(total + elemento.precio)
   }
 
   return (

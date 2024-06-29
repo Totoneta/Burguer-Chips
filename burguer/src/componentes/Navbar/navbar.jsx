@@ -12,8 +12,6 @@ function Navbar({ carrito, setCarrito, cantidad, setCantidad, total, setTotal })
     }
 
 
-    console.log(openmenu);
-
     return (
         <nav className="container-navbar">
             <ul className="nav-list">
@@ -26,9 +24,9 @@ function Navbar({ carrito, setCarrito, cantidad, setCantidad, total, setTotal })
 
                 <li className="nav-item"><Link to="/Ingresar">Ingresar</Link></li>
 
-                <li className="nav-item-carrito" onClick={ShowHideMenu}>
+                <li className="nav-item-carrito" >
 
-                    <div className="cart-navbar-menu" >
+                    <div className="cart-navbar-menu"onClick={ShowHideMenu} >
                         <img className="carrito-img-navbar" src="/carrito.svg" alt="Carrito" />
                         <span> {cantidad} </span>
                     </div>

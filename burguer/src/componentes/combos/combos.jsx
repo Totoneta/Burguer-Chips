@@ -7,8 +7,7 @@ function Combos({ setCarrito, carrito, setCantidad, cantidad, setTotal, total })
     setCantidad(cantidad + 1)
     setTotal(total + elemento.precio)
   }
-
-
+ 
   return (
     <div className='productos-cont'>
 

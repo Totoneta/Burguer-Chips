@@ -1,11 +1,12 @@
 import burguers from "../../data-json/burgers.json"
 
 
-function Burguers({ setCarrito, carrito }) {
+function Burguers({ setCarrito, carrito, setCantidad, cantidad, setTotal, total }) {
 
   const agregarAlCarrito = (carrito, elemento) => {
     setCarrito([...carrito, elemento])
-    console.log(carrito)
+    setCantidad(cantidad + 1)
+    setTotal(total + elemento.precio)
   }
 
   return (

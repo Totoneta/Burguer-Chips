@@ -43,7 +43,8 @@ export function ItemsCart({carrito, setCarrito, cantidad, setCantidad, total, se
       {openmenu && (
         <div className="btns-cart-vaciar-pagar">
           <button className="vaciar-cart" onClick={VaciarCarrito}>Vaciar Carrito</button>
-          <span>Total: ${total}</span>
+          { cantidad > 0 ? <span>Total: ${total}</span> : <span>Total: $0</span>
+          }
           <button className="pagar-cart">Pagar</button>
         </div>
       )}

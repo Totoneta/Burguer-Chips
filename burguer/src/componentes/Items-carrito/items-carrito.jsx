@@ -1,4 +1,4 @@
-export function ItemsCart(carrito, setCarrito, cantidad, setCantidad, total, setTotal, openmenu) {
+export function ItemsCart({carrito, setCarrito, cantidad, setCantidad, total, setTotal, openmenu}) {
 
     const Eliminar = (index) => {
         const updatedCarrito = [...carrito];
@@ -14,38 +14,40 @@ export function ItemsCart(carrito, setCarrito, cantidad, setCantidad, total, set
     }
 
 
+
     return (
-        <>
-            <ul className="cart">
-                {openmenu && (
-                    Array.isArray(carrito) && carrito.length > 0 ? (
-                        carrito.map((item, index) => (
-                            <li key={index} className="item-cart">
-                                <img src={item.img} alt={item.titulo} />
-                                <div className="item-cart-text">
-                                    <h3>{item.titulo}</h3>
-                                    <span>${item.precio}</span>
-                                </div>
-                                <div className="item-cart-btns">
-                                    <button onClick={() => Eliminar(index)}>Eliminar</button>
-                                    <button>Editar</button>
-                                </div>
-                            </li>
-                        ))
-                    ) : (
-                        <li className="cart-vacio">
-                            <h1>EMPTY CART</h1>
-                        </li>
-                    )
-                )}
-            </ul>
-            {openmenu && (
-                <div className="btns-cart-vaciar-pagar">
-                    <button className="vaciar-cart" onClick={VaciarCarrito}>Vaciar Carrito</button>
-                    <span>Total: ${total}</span>
-                    <button className="pagar-cart">Pagar</button>
+        <div className="cart-container">
+      {openmenu ? (
+        <ul className="cart">
+          {Array.isArray(carrito) && carrito.length > 0 ? (
+            carrito.map((item, index) => (
+              <li key={index} className="item-cart">
+                <img src={item.img} alt={item.titulo} />
+                <div className="item-cart-text">
+                  <h3>{item.titulo}</h3>
+                  <span>${item.precio}</span>
                 </div>
-            )}
-        </>
-    )
-}
+                <div className="item-cart-btns">
+                  <button onClick={() => Eliminar(index)}>Eliminar</button>
+                  <button>Editar</button>
+                </div>
+              </li>
+            ))
+          ) : (
+            <li className="cart-vacio">
+              <h1>EMPTY CART</h1>
+            </li>
+          )}
+        </ul>
+      ) : null}
+      {openmenu && (
+        <div className="btns-cart-vaciar-pagar">
+          <button className="vaciar-cart" onClick={VaciarCarrito}>Vaciar Carrito</button>
+          <span>Total: ${total}</span>
+          <button className="pagar-cart">Pagar</button>
+        </div>
+      )}
+    </div>
+  );
+};
+

@@ -11,6 +11,8 @@ const ContextoAgregarAlCarritoBebidas = React.createContext()
 const ContextoEliminar = React.createContext()
 const ContextoVaciarCarrito = React.createContext()
 
+const ContextoButtonsCart = React.createContext()
+
 export function useCarritoContext() {
     return useContext(ContextoCarrito)
 };
@@ -34,6 +36,9 @@ export function useAgregarAlCarritoBurguers() {
 };
 export function useAgregarAlCarritoBebidas() {
     return useContext(ContextoAgregarAlCarritoBebidas)
+};
+export function useContextoButtonsCart() {
+    return useContext(ContextoButtonsCart)
 };
 
 
@@ -66,6 +71,16 @@ export function CarritoContext({ children }) {
         setTotal(0)
     }
 
+    /* Creación de botones del carrito */
+    function ButtonsCart() {
+        return (
+            <div className="btns-cart-vaciar-pagar">
+                <button className="vaciar-cart" onClick={VaciarCarrito}>Vaciar Carrito</button>
+                {cantidad > 0 ? <span>Total: ${total}</span> : <span>Total: $0</span>}
+                <button className="pagar-cart">Pagar</button>
+            </div>
+        )
+    };
 
     /* Agregar al carrito combos.jsx */
     const AgregarAlCarritoCombos = (carrito, elemento) => {
@@ -87,9 +102,9 @@ export function CarritoContext({ children }) {
     }
 
     /* Verificación de localstorage de carrito, cantidad y total */
-        useEffect(() => {
-            localStorage.setItem('carrito', JSON.stringify(carrito));
-        }, [carrito]);
+    useEffect(() => {
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    }, [carrito]);
 
     useEffect(() => {
         let canttotal = 0;
@@ -106,13 +121,15 @@ export function CarritoContext({ children }) {
     return (
         <ContextoCarrito.Provider value={carrito}>
             <ContextoCantidad.Provider value={cantidad}>
-                <ContextoTotal.Provider value={total}>
+                <ContextoTotal.Provider value={total}> 
                     <ContextoEliminar.Provider value={Eliminar}>
                         <ContextoVaciarCarrito.Provider value={VaciarCarrito}>
                             <ContextoAgregarAlCarritoCombos.Provider value={AgregarAlCarritoCombos}>
                                 <ContextoAgregarAlCarritoBurguers.Provider value={AgregarAlCarritoBurguers}>
                                     <ContextoAgregarAlCarritoBebidas.Provider value={AgregarAlCarritoBebidas}>
-                                        {children}
+                                        <ContextoButtonsCart.Provider value={ButtonsCart}>
+                                            {children}
+                                        </ContextoButtonsCart.Provider>
                                     </ContextoAgregarAlCarritoBebidas.Provider>
                                 </ContextoAgregarAlCarritoBurguers.Provider >
                             </ContextoAgregarAlCarritoCombos.Provider >

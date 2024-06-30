@@ -15,7 +15,7 @@ function Navbar( ) {
 
     /* Contexto en /contextos/carrito-context.jsx */
     const cantidad = useCantidadContext()
-    console.log(cantidad);
+
     return (
         <nav className="container-navbar">
             <ul className="nav-list">

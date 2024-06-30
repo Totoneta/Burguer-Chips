@@ -1,15 +1,11 @@
-import { useCantidadContext, useCarritoContext, useEliminarContext, useTotalContext, useVaciarCarritoContext } from '../../contextos/carrito-context';
+import { useCarritoContext, useContextoButtonsCart, useEliminarContext } from '../../contextos/carrito-context';
 
 export function ItemsCart({ openmenu }) {
 
   /* Contexto en /contextos/carrito-context.jsx */
   const carrito = useCarritoContext();
-  const cantidad = useCantidadContext();
-  const total = useTotalContext();
-  const VaciarCarrito = useVaciarCarritoContext();
   const Eliminar = useEliminarContext();
-
-  console.log(carrito);
+  const ButtonsCart = useContextoButtonsCart();
 
   return (
     <div className="cart-container">
@@ -34,19 +30,13 @@ export function ItemsCart({ openmenu }) {
               <h1>EMPTY CART</h1>
             </li>
           )}
+            <ButtonsCart></ButtonsCart>
         </ul>
+
       ) : (
         <></>
       )}
-      {openmenu && (
-        <div className="btns-cart-vaciar-pagar">
-          <button className="vaciar-cart" onClick={VaciarCarrito}>Vaciar Carrito</button>
-          {cantidad > 0 ? <span>Total: ${total}</span> : <span>Total: $0</span>
-          }
-          <button className="pagar-cart">Pagar</button>
-        </div>
-      )}
     </div>
-  );
+  )
 };
 

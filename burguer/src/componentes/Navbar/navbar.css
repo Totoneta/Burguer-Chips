@@ -99,9 +99,11 @@
     justify-content: center;
     flex-direction: column;
     border-radius: 5px;
-    overflow: hidden;
-    border: 1px solid #000;
     background-color:#fff785;
+}
+
+.cart{
+    border: 1.5px solid #000;
 }
 
 .item-cart{
@@ -111,7 +113,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #000;
     z-index: 10;
 
 }

@@ -1,12 +1,11 @@
+import { useAgregarAlCarritoBebidas, useCarritoContext } from "../../contextos/carrito-context";
 import bebidas from "../../data-json/bebidas.json";
 
-function Bebidas({ setCarrito, carrito, setCantidad, cantidad, setTotal, total }) {
+function Bebidas() {
 
-  const agregarAlCarrito = (carrito, elemento) => {
-    setCarrito([...carrito, elemento])
-    setCantidad(cantidad + 1)
-    setTotal(total + elemento.precio)
-  }
+  /* Contexto en /contextos/carrito-context.jsx */
+  const carrito = useCarritoContext();
+  const AgregarAlCarritoBebidas = useAgregarAlCarritoBebidas();
 
   return (
     <div className='productos-cont'>
@@ -27,7 +26,7 @@ function Bebidas({ setCarrito, carrito, setCantidad, cantidad, setTotal, total }
                 </div>
                 <div className="button-cont">
                   <button
-                    onClick={() => agregarAlCarrito(carrito, elemento)}>
+                    onClick={() => AgregarAlCarritoBebidas(carrito, elemento)}>
                     <img
                       id={elemento.id}
                       src="/add-carrito.svg"

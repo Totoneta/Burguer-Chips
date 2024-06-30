@@ -1,22 +1,18 @@
-export function ItemsCart({carrito, setCarrito, cantidad, setCantidad, total, setTotal, openmenu}) {
+import { useCantidadContext, useCarritoContext, useEliminarContext, useTotalContext, useVaciarCarritoContext } from '../../contextos/carrito-context';
 
-    const Eliminar = (index) => {
-        const updatedCarrito = [...carrito];
-        updatedCarrito.splice(index, 1);
-        setCarrito(updatedCarrito);
-        setCantidad(cantidad - 1);
-    }
+export function ItemsCart({ openmenu }) {
 
-    const VaciarCarrito = () => {
-        setCarrito([])
-        setCantidad(0)
-        setTotal(0)
-    }
+  /* Contexto en /contextos/carrito-context.jsx */
+  const carrito = useCarritoContext();
+  const cantidad = useCantidadContext();
+  const total = useTotalContext();
+  const VaciarCarrito = useVaciarCarritoContext();
+  const Eliminar = useEliminarContext();
 
+  console.log(carrito);
 
-
-    return (
-        <div className="cart-container">
+  return (
+    <div className="cart-container">
       {openmenu ? (
         <ul className="cart">
           {Array.isArray(carrito) && carrito.length > 0 ? (
@@ -39,11 +35,13 @@ export function ItemsCart({carrito, setCarrito, cantidad, setCantidad, total, se
             </li>
           )}
         </ul>
-      ) : null}
+      ) : (
+        <></>
+      )}
       {openmenu && (
         <div className="btns-cart-vaciar-pagar">
           <button className="vaciar-cart" onClick={VaciarCarrito}>Vaciar Carrito</button>
-          { cantidad > 0 ? <span>Total: ${total}</span> : <span>Total: $0</span>
+          {cantidad > 0 ? <span>Total: ${total}</span> : <span>Total: $0</span>
           }
           <button className="pagar-cart">Pagar</button>
         </div>

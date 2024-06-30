@@ -2,8 +2,10 @@ import { useState } from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 import { ItemsCart } from "../Items-carrito/items-carrito";
+import { useCantidadContext } from "../../contextos/carrito-context";
 
-function Navbar({ carrito, setCarrito, cantidad, setCantidad, total, setTotal }) {
+
+function Navbar( ) {
 
     const [openmenu, setOpenMenu] = useState(false);
 
@@ -11,7 +13,9 @@ function Navbar({ carrito, setCarrito, cantidad, setCantidad, total, setTotal })
         setOpenMenu(!openmenu)
     }
 
-
+    /* Contexto en /contextos/carrito-context.jsx */
+    const cantidad = useCantidadContext()
+    console.log(cantidad);
     return (
         <nav className="container-navbar">
             <ul className="nav-list">
@@ -31,7 +35,7 @@ function Navbar({ carrito, setCarrito, cantidad, setCantidad, total, setTotal })
                         <span> {cantidad} </span>
                     </div>
 
-                    <ItemsCart openmenu={openmenu} carrito={carrito} setCarrito={setCarrito} cantidad={cantidad} setCantidad={setCantidad} total={total} setTotal={setTotal} />
+                    <ItemsCart openmenu={openmenu} />
 
                 </li>
             </ul>

@@ -1,13 +1,14 @@
 import combos from "../../data-json/combos.json"
+import { useAgregarAlCarritoCombos, useCarritoContext } from "../../contextos/carrito-context";
 
-function Combos({ setCarrito, carrito, setCantidad, cantidad, setTotal, total }) {
 
-  const agregarAlCarrito = (carrito, elemento) => {
-    setCarrito([...carrito, elemento])
-    setCantidad(cantidad + 1)
-    setTotal(total + elemento.precio)
-  }
- 
+function Combos() {
+
+  /* Contexto en /contextos/carrito-context.jsx */
+  const carrito = useCarritoContext();
+  const AgregarAlCarritoCombos = useAgregarAlCarritoCombos();
+
+
   return (
     <div className='productos-cont'>
 
@@ -27,7 +28,7 @@ function Combos({ setCarrito, carrito, setCantidad, cantidad, setTotal, total })
                 </div>
                 <div className="button-cont">
                   <button
-                    onClick={() => agregarAlCarrito(carrito, elemento)}>
+                    onClick={() => AgregarAlCarritoCombos(carrito, elemento)}>
                     <img
                       id={elemento.id}
                       src="/add-carrito.svg"

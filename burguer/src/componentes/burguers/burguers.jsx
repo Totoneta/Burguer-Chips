@@ -1,13 +1,13 @@
 import burguers from "../../data-json/burgers.json"
+import { useCarritoContext, useAgregarAlCarritoBurguers } from "../../contextos/carrito-context";
 
 
-function Burguers({ setCarrito, carrito, setCantidad, cantidad, setTotal, total }) {
 
-  const agregarAlCarrito = (carrito, elemento) => {
-    setCarrito([...carrito, elemento])
-    setCantidad(cantidad + 1)
-    setTotal(total + elemento.precio)
-  }
+function Burguers() {
+
+  /* Contexto en /contextos/carrito-context.jsx */
+  const carrito = useCarritoContext();
+  const AgregarAlCarritoBurguers = useAgregarAlCarritoBurguers();
 
   return (
     <div className='productos-cont'>
@@ -28,7 +28,7 @@ function Burguers({ setCarrito, carrito, setCantidad, cantidad, setTotal, total 
                 </div>
                 <div className="button-cont">
                   <button
-                    onClick={() => agregarAlCarrito(carrito, elemento)}>
+                    onClick={() => AgregarAlCarritoBurguers(carrito, elemento)}>
                     <img
                       id={elemento.id}
                       src="/add-carrito.svg"

@@ -36,8 +36,8 @@ Contains:
 
 # Start.jsx (Page 2)
 Contains:
--StartS.jsx (Login)
--Register.jsx (Register)
+-IniciarS.jsx (Login)
+-Registrarse.jsx (Register)
 
 *Both when the option to switch to the other component is selected (from login to register or vice versa) a blur filter is added on the opposite and cancels all point-events
 *Mainly it is interface
@@ -46,7 +46,7 @@ Contains:
 Contains:
 -Combos.jsx (All combos are shown)
 -Burguers.jsx (All burgers are displayed)
--Drinks.jsx (All drinks are displayed)
+-Bebidas.jsx (All drinks are displayed)
 
 *All products are rendered on the products page.jsx 
 *The styles of the components and the same page are in products.css
